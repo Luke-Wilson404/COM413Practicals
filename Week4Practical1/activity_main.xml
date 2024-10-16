@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/helloTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="197dp"
+        android:text="Hello"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextBtn" />
+
+    <Button
+        android:id="@+id/SearchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:text="SEARCH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SearchBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SearchBar" />
+
+    <Button
+        android:id="@+id/CallBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="64dp"
+        android:text="CALL"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TextBtn"
+        app:layout_constraintEnd_toStartOf="@+id/SearchBtn"
+        app:layout_constraintTop_toBottomOf="@+id/SearchBar" />
+
+    <Button
+        android:id="@+id/TextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:text="TEXT"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/helloTxt"
+        app:layout_constraintStart_toStartOf="@+id/CallBtn"
+        app:layout_constraintTop_toBottomOf="@+id/CallBtn" />
+
+    <EditText
+        android:id="@+id/SearchBar"
+        android:layout_width="259dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="87dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Search..."
+        android:textColor="#6E6E6E"
+        app:layout_constraintBottom_toTopOf="@+id/CallBtn"
+        app:layout_constraintEnd_toStartOf="@+id/SearchBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
